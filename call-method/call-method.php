@@ -1,6 +1,6 @@
 <?php 
 
-class student{
+class students{
     private $firstname;
     private $lastname;
 
@@ -15,12 +15,12 @@ class student{
     }
 }
 
-$mix= new student();
+$mix= new students();
 $mix->setname("Tanvirul","Nishat");
 //------------------------first-------------------------------//
 
 
-class students{
+class studentc{
     private $firstname;
     private $lastname;
 
@@ -36,7 +36,7 @@ class students{
     }
 }
 
-$mixer= new students();
+$mixer= new studentc();
 $mixer->setnames("Tanvirul","HQ");
 
 //------------------------second-------------------------------//
@@ -62,7 +62,7 @@ $girl1->setname("Tanvirul","Nishat");
 
 //------------------------third-------------------------------//
 
-class friend{
+class friends{
     private $firstfriend;
     private $secondfriend;
 
@@ -78,7 +78,7 @@ class friend{
     }
 }
 
-$friend1= new friend();
+$friend1= new friends();
 $friend1->setname("Tanvirul","Nishat");
 
 //------------------------four------------------------------//
@@ -137,5 +137,100 @@ $clossed= new closs();
 $clossed->setname("Tanvirul","HQ","Nishat");
 echo "<pre>";
 print_r($clossed);
+echo "</pre>";
+//------------------------five-------------------------------//
+
+class animals{
+    private $tiger;
+    private $lion;
+
+    private function setname($firstname,$secondname){
+        $this->tiger = $firstname;
+        $this->lion = $secondname;
+    }
+
+    public function __call($name, $arguments)
+    {
+        echo "This is a private function<br>";
+    }
+}
+
+$zoo= new animals();
+$zoo->setname("Tanvirul","Nishat");
+
+
+//------------------------six-------------------------------//
+
+
+class mobile{
+    private $iphone;
+    private $samsung;
+
+    private function setname($brand1,$brand2){
+        $this->iphone = $brand1;
+        $this->samsung = $brand2;
+    }
+
+    public function __call($name, $arguments)
+    {
+        echo "This is a private function";
+    }
+}
+
+$seller= new mobile();
+$seller->setname("brands","phones");
+
+//------------------------seven-------------------------------//
+
+
+class bike{
+    private $royel;
+    private $yamaha;
+
+    private function setname($one,$two){
+        $this->royel = $one;
+        $this->yamaha = $two;
+    }
+
+    public function __call($name, $arguments)
+    {
+        if(method_exists($this,$name)){
+            call_user_func_array([$this,$name],$arguments);
+            
+        }else{
+            echo "The property exists";
+        }
+    }
+}
+
+$bikers= new bike();
+$bikers->setname("brnad","Bikes");
+echo "<pre>";
+print_r($bikers);
+echo "</pre>";
+
+//------------------------eight------------------------------//
+
+class bird{
+    private $first;
+    private $second;
+
+    private function setname($one,$two){
+        $this->first = $one;
+        $this->second = $two;
+    }
+
+    public function __call($name, $arguments)
+    {
+        if(method_exists($this,$name)){
+            call_user_func_array([$this,$name],$arguments);
+        }
+    }
+}
+
+$mic= new bird();
+$mic->setname("Tanvirul","HQ","Nishat");
+echo "<pre>";
+print_r($mic);
 echo "</pre>";
 ?>
