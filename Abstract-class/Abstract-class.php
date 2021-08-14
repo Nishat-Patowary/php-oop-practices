@@ -109,14 +109,14 @@ abstract class lion{
     abstract protected function tiger($a,$b);
 }
 
-class sheep extends lion{
+class  hyper extends lion{
 
     public function tiger($a,$b){
         echo $a + $b;
     }
 }
 
-$mic= new sheep();
+$mic= new hyper();
 $mic->tiger(50,50);
 
 //--------------------------seven-------------------------------//
