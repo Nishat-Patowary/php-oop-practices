@@ -22,17 +22,17 @@ $mix->num(50,80);
 
 abstract class first{
     public $name;
-    abstract protected function one($x,$y);
+    abstract protected function ones($x,$y);
 }
 
 class second extends first{
-    public function one($x,$y){
+    public function ones($x,$y){
         echo $x + $y;
     }
 }
 
 $mixer=new second();
-$mixer->one(100,90);
+$mixer->ones(100,90);
 
 //--------------------------second-------------------------------//
 
@@ -58,13 +58,13 @@ abstract class shanto{
     abstract protected function best($x,$y);
 }
 
-class shihab extends shanto{
+class shihabs extends shanto{
     public function best($x,$y){
         echo $x - $y;
     }
 }
 
-$mixers= new shihab();
+$mixers= new shihabs();
 $mixers->best(100,60);
 
 //--------------------------four-------------------------------//
@@ -101,4 +101,37 @@ class momin extends bishal{
 
 $calcu= new momin();
 $calcu->call(100,5);
+
+//--------------------------six-------------------------------//
+
+abstract class lion{
+    public $king;
+    abstract protected function tiger($a,$b);
+}
+
+class sheep extends lion{
+
+    public function tiger($a,$b){
+        echo $a + $b;
+    }
+}
+
+$mic= new sheep();
+$mic->tiger(50,50);
+
+//--------------------------seven-------------------------------//
+
+abstract class friend{
+    public $Closs;
+    abstract protected function name($first,$second);
+}
+
+class haters extends friend{
+    public function name($first,$second){
+        echo $first * $second;
+    }
+}
+
+$result= new haters();
+$result->name(50,60);
 ?>
