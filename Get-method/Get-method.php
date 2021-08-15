@@ -1,7 +1,5 @@
 <?php
 
-use second as GlobalSecond;
-use student as GlobalStudent;
 
 class first{
     private $second= "This is a number";
@@ -15,23 +13,47 @@ class first{
 $mix=new first();
 $mix->second;
 
+//---------------------------------------------------------------//
+
+class one{
+    private $two= "This is number two";
+    public function __get($name)
+    {
+        echo "You are trying to not exists property<br>";
+    }
+}
+
+$third= new one();
+$third->two;
 //-------------------------------------------------------------------------------//
 
+class myself{
+    private $myhome="This is my home";
+    public function __get($name)
+    {
+        echo "This is not exists property<br>";
+    }
+}
 
-class nishat{
+$my= new myself();
+$my->myhome;
+
+//---------------------------------------------------------------//
+
+class nishatt{
     private $niloy;
     public function __get($name)
     {
         echo "You are trying not exixt property<br>";
     }
 }
-$mixer=new nishat();
+$mixer=new nishatt();
 $mixer->niloy;
 
 //-------------------------------------------------------------------------------//
 
 
-class student{
+class students{
 
     private $detail=["name"=>"Nishat","roll"=>"141290"];
     public function __get($name)
@@ -40,7 +62,7 @@ class student{
     }
 }
 
-$cal=new student();
+$cal=new students();
 $cal->detail;
 
 //-------------------------------------------------------------------------------//
@@ -59,7 +81,7 @@ print_r($calculate->class);
 
 //-------------------------------------------------------------------------------//
 
-class lion{
+class lions{
     private $tiger;
     public function __get($name)
     {
@@ -67,7 +89,7 @@ class lion{
     }
 }
 
-$animal= new lion();
+$animal= new lions();
 $animal->tiger;
 
 //-------------------------------------------------------------------------------//
@@ -119,4 +141,22 @@ class third{
 
 $calcu= new third();
 echo $calcu->college;
+
+//---------------------------------------------------------------//
+
+
+class king{
+    private $forest= ["King"=>"lion","place"=>"forest"];
+    public function __get($animalr)
+    {
+        if(array_key_exists($animalr,$this->forest)){
+            return $this->forest[$animalr];
+        }else{
+            return "The key is not exists";
+        }
+    }
+}
+
+$new= new king();
+echo $new->forest;
 ?>
