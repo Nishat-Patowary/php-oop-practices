@@ -11,6 +11,7 @@ class nishatt{
 $mix= new nishatt();
 $mix->myhome();
 
+//---------------------------------------------------------------//
 
 class niloy{
     public function mybrother(){
@@ -20,6 +21,28 @@ class niloy{
 
 $mixer= new niloy();
 $mixer->mybrother();
+
+//---------------------------------------------------------------//
+
+class lions{
+    public function animal(){
+        echo "The animal name is " .get_class($this) . "<br>";
+    }
+}
+
+$miv= new lions();
+$miv->animal();
+
+//---------------------------------------------------------------//
+
+class tiger{
+    public function animals(){
+        echo "The animals name is " . get_class($this) . "<br>";
+    }
+}
+
+$fox= new tiger();
+$fox->animals();
 
 //------------------get_class used------------------------------//
 
@@ -53,7 +76,8 @@ class niloys extends nishats{
 $mixers= new niloys();
 $mixers->brother();
 
-//------------------------------------------//
+
+//---------------------------------------------------------------//
 
 class bishall{
 
@@ -67,7 +91,17 @@ class friends extends bishall{
 $best= new friends();
 $best->closs();
 
+//---------------------------------------------------------------//
 
+class nishattt{}
+class farmer extends nishattt{
+    public function brother(){
+        echo "The present class is " . get_parent_class($this) . "<br>";
+    }
+}
+
+$vai= new farmer();
+$vai->brother();
 //---------------------- get_present_class used-----------------------------//
 
 
