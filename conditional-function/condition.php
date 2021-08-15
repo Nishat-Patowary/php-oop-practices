@@ -1,13 +1,11 @@
 <?php
 
-use lion as GlobalLion;
-
-class nishat{
+class nishatt{
 
 }
 
 if (class_exists("nishat")){
-    $mix= new nishat();
+    $mix= new nishatt();
     echo "The class is exists<br>";
 }else{
 
@@ -26,6 +24,37 @@ if(class_exists("niloys")){
 }else{
     echo "The class is not exists";
 }
+
+//------------------------second---------------------------//
+
+
+class nihal{
+
+}
+
+if(class_exists("nihal")){
+    $mic= new nihal();
+    echo "This is my name";
+}else{
+    echo "This is not my name";
+}
+
+//------------------------third---------------------------//
+
+
+class nisa{
+
+}
+
+if(class_exists("nisal")){
+    $mixed= new nisa();
+    echo "This is nisa";
+}else{
+    echo "This is not nisa";
+}
+
+//------------------------four---------------------------//
+
 
 //---------------------this class is not exists-----------------------//
 
@@ -53,6 +82,30 @@ if(interface_exists("home")){
 }
 //---------------------------------------------------------------//
 
+
+interface mynames{
+
+}
+
+if(interface_exists("mynames")){
+    echo "This is my name";
+}else{
+    echo "This is not my name";
+}
+//---------------------------------------------------------------//
+
+interface shihab_moda{
+
+}
+
+if(interface_exists("shihab_moda")){
+    echo "Shihab is my closs friend";
+}else{
+    echo "shihab is not my closs friend";
+}
+
+//---------------------------------------------------------------//
+
 interface cat{
 
 }
@@ -78,6 +131,36 @@ if(method_exists($animal,"mymethod")){
     echo "The method is not exists";
 }
 
+//---------------------------------------------------------------//
+
+
+class shantoo{
+
+    public function shanto(){
+
+    }
+}
+
+$shantos=new shantoo();
+if(method_exists($shantos,"shantoo")){
+    echo "The method is exists";
+}else{
+    echo "The method is not exists";
+}
+//---------------------------------------------------------------//
+
+class first{
+    public function second(){
+
+    }
+}
+
+$third= new first();
+if(method_exists($third,"first")){
+    echo "The method is exists";
+}else{
+    echo "The method is not exists";
+}
 //---------------------------------------------------------------//
 
 class lions{
@@ -137,6 +220,17 @@ if(trait_exists("bishal")){
 
 //---------------------------------------------------------------//
 
+trait myhome{
+
+}
+
+if(trait_exists("myhome")){
+    echo "The trait is exits";
+}else{
+    echo "The trait is not exists";
+}
+//---------------------------------------------------------------//
+
 trait tamim{
     public function oil(){
 
@@ -162,7 +256,15 @@ if(property_exists("school","student")){
 
 //---------------------------------------------------------------//
 
+class friend{
+    public $bishal;
+}
 
+if(property_exists("friend","bishal")){
+    echo "The property is exists";
+}else{
+    echo "The property is not exists";
+}
 class animal{
     public $bird;
 }
@@ -229,6 +331,15 @@ if(is_a($rayer,"shanto")){
 }
 
 //---------------------------is_a method used-----------------------------------//
+
+
+
+       
+        
+   
+
+
+
 
 
 ?>
